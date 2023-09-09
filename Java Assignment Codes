@@ -1,0 +1,99 @@
+//Java Program to Print "HELLO WORLD"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("HELLO WORLD");
+    }
+}
+
+//Java Program to Check if a number is a Spy Number or not
+import java.util.Scanner;
+
+public class SpyNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        int product = 1;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit;
+            product *= digit;
+            num /= 10;
+        }
+
+        if (sum == product) {
+            System.out.println("Spy Number");
+        } else {
+            System.out.println("Not a Spy Number");
+        }
+
+        scanner.close();
+    }
+}
+
+//Java Program to Reverse a String 
+import java.util.Scanner;
+public class ReverseString {
+    public static void main(String[] args) {
+        System.out.print("Enter a string->");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String reversed = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
+
+        System.out.println("Reversed String: " + reversed);
+    }
+
+//Java Program to find sum of digits entered 
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        int sum = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit;
+            num /= 10;
+        }
+
+        System.out.println("Sum of digits: " + sum);
+        scanner.close();
+    }
+}
+
+//Java Program to print Multiplication Table 
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            int result = num * i;
+            System.out.println(num + " X " + i + " = " + result);
+        }
+
+        scanner.close();
+    }
+
+
+
+
+
+
+
+
+
